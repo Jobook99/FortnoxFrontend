@@ -1,0 +1,36 @@
+.form{
+    width: 200px;
+    margin: auto;
+}
+.formInput{
+    background-color: white;
+    width: 196px;
+    height: 24px;
+    border-width: 2px;
+    border-image: none;
+    border-style: inset;
+}
+.formSaveButton {
+    display: inline-block;
+    padding: 8px;
+    width: 80px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: rgb(34, 214, 34);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin: 8px;
+    margin-left: 120px;
+}
+.formSaveButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

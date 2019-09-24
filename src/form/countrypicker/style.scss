@@ -1,0 +1,39 @@
+.countryBoxContiner{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 200px;
+}
+.countryBox{
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    margin: auto;
+    height: 30px;
+    background-color: white;
+    border-color: gray;
+    border-width: 2px;
+    border-image: none;
+    border-style: inset;
+    border-top: none;
+    div{
+        height: 30px;
+        text-align: left;
+        padding: 4px;
+    }
+}
+.countryBoxCountry{
+    width: 80%;
+}
+.countryBoxMultiplier{
+    width: 20%;
+}
+.toggleDropnownButton{
+    div{
+        width: 90%;
+        text-align: left;
+    }
+    img{
+        width: 10%;
+    }
+}

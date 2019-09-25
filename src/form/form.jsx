@@ -3,7 +3,7 @@ import "./style.scss";
 import ColorPicker from "./colorpicker/colorpicker";
 import CountryPicker from "./countrypicker/countrypicker";
 
-export default function form(props) {
+export default function Form(props) {
     const [nameBorderColor, setNameBorderColor] = React.useState("gray");
     const [weightBorderColor, setWeightBorderColor] = React.useState("gray");
     const [countryMulti, setCountryMulti] = React.useState(1.3);
@@ -22,19 +22,16 @@ export default function form(props) {
     }
     function selectedCountry(multiplier) {
         setCountryMulti(multiplier);
-        console.log(box);
     }
     function calculateShippingcost() {
         box.shippingcost = box.weight*countryMulti;
         let newbox = {...box};
         setBox(newbox);
-        console.log(box);
     }
     function onNameChange(ev) {
         box.receiver = ev.target.value;
         let newbox = {...box};
         setBox(newbox);
-        console.log(box);
         if(box.receiver == ""){
             setNameBorderColor("red");
         }else{
@@ -45,7 +42,6 @@ export default function form(props) {
         box.weight = ev.target.value;
         let newbox = {...box};
         setBox(newbox);
-        console.log(box);
         if(box.weight == "" || box.weight <= 0){
             setWeightBorderColor("red");
         }else{

@@ -3,9 +3,10 @@ import "./style.scss";
 
 export default function ColorPicker(props) {
     const [dropdownColor, setDropdownColor] = React.useState(false);
+    const [noBlue, setNoBlue] = React.useState(0);
 
     function Color(props) {
-        return <button onClick={() => selectedColor(props.red, props.green)} className="color" style={{backgroundColor: "rgb("+props.red+", "+props.green+", 0)"}}></button>
+        return <button onClick={() => selectedColor(props.red, props.green)} className="color" style={{backgroundColor: "rgb("+props.red+", "+props.green+", "+noBlue+")"}}></button>
     }
     function ColorPickerBoxContiner() {
         if(dropdownColor){
@@ -37,7 +38,7 @@ export default function ColorPicker(props) {
         }
     }
     return<div className="ColorPicker">
-            <button className="toggleDropnownButton" onClick={ColorPickerToggle} style={{backgroundColor: "rgb("+props.red+", "+props.green+", 0)"}}><em>click to show colorpicker</em></button>
+            <button className="toggleDropnownButton" onClick={ColorPickerToggle} style={{backgroundColor: "rgb("+props.red+", "+props.green+", "+noBlue+")"}}><em>click to show colorpicker</em></button>
             <ColorPickerBoxContiner></ColorPickerBoxContiner>
         </div>
 }

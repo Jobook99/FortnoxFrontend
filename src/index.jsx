@@ -16,7 +16,6 @@ function App(params) {
     async function createBox(newData) {
         let data = await new Facade().CreateBox(newData);
         setBoxes(data);
-        console.log(data);
         return data;
     }
     if(boxes == null){
